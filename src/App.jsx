@@ -20,7 +20,7 @@ function App() {
     <Header/>
     <div className='md:flex max-w-7xl mx-auto'>
         <Blogs handleAddToBookMarks={handleAddToBookMarks}/>
-        <BookMarks/>
+        <BookMarks bookMarks={bookMarks}/>
 
     </div>
   
