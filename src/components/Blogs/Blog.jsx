@@ -5,7 +5,7 @@ const Blog = ({blog}) => {
     const {title,cover,author,author_img,reading_time,posted_date,hashtags}=blog;
   return (
     <div className=''>
-         <img src={cover} alt="blog-cover" />
+         <img  className='w-full'src={cover} alt="blog-cover" />
       
        
         <div className="flex justify-between">
