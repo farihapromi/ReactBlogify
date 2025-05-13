@@ -2,28 +2,37 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Blog = ({blog}) => {
+    const {title,cover,author,author_img,reading_time,posted_date,hashtags}=blog;
   return (
     <div className=''>
-        <img src={blog.cover} alt="blog-cover" />
-        <div className="flex gap-2 m-4">
-            <div className='flex gap-4'>
+         <img src={cover} alt="blog-cover" />
+      
+       
+        <div className="flex justify-between">
+            <div className='flex'>
 
            
-            <img  className='p-2'src={blog.author_img} alt="" height='50px' width="50px" />
-           <div className='flex flex-col '>
-             <p>{blog.author}</p>
-               <p>{blog.posted_date}</p>
+            <img  className='w-16'src={author_img} alt=""  />
+            <div className='ml-6'>
+                <h3 className="text-2xl">{author}</h3>
+                <p>{posted_date}</p>
+            </div>
+          </div>
 
-           </div>
-
-             <p className='mx-28'>{blog.reading_time} minute read</p>
-          
+             <div>
+                <span>{reading_time} minute read</span>
              </div>
-             {/* reading time
-              */}
+            
+             
             
 
         </div>
+           <h2 className='text-4xl'>{title}</h2>
+          <p>
+            {
+                hashtags.map((hash,idx)=><span key={idx}><a href=''>#{hash}</a></span>)
+            }
+          </p>
 
       
     </div>
