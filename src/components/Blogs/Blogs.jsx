@@ -9,9 +9,9 @@ const Blogs = () => {
         .then(data=>setBlogs(data))
     },[])
   return (
-    <div>
+    <div className='md:w-2/3'>
         {
-            blogs.map(blog=><Blog></Blog>)
+            blogs.map(blog=><Blog blog={blog}></Blog>)
 
         }
       
